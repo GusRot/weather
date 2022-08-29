@@ -1,0 +1,33 @@
+@import "../../styles/colors";
+@import "../../styles/common";
+
+.climate-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    gap: $spacing;
+    height: 100vh;
+
+    &-image {
+        margin: $spacing-x 0;
+    }
+
+    &-periods,
+    &-infos {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: $spacing-m;
+    }
+
+    &-back {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}

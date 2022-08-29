@@ -1,0 +1,10 @@
+@import "../../styles/colors";
+@import "../../styles/common";
+
+.periods-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: $spacing-m;
+}
