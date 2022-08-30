@@ -11,7 +11,7 @@
     </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Mobile-Sunny-example" transform="translate(-133.000000, -274.000000)">
-            <rect fill="#8AD1DA" x="0" y="0" width="375" height="667"></rect>
+            <rect fill="transparent" x="0" y="0" width="375" height="667"></rect>
             <rect id="Rectangle" stroke="#979797" fill="url(#linearGradient-1)" x="0" y="0" width="375" height="667"></rect>
             <g id="sun" transform="translate(134.000000, 275.000000)" fill-rule="nonzero" stroke="#FFFFFF">
                 <path d="M81,53 C81,37.536026 68.463974,25 53,25 C37.5360264,25 25,37.5360262 25,53 C25,68.4639738 37.5360264,81 53,81 C68.463974,81 81,68.463974 81,53 Z" id="sun-path" stroke-width="6"></path>

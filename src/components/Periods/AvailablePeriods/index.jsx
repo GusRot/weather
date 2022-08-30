@@ -1,4 +1,4 @@
-import WeatherIcons from "../WeatherIcons";
+import WeatherIcons from "../../WeatherIcons";
 import "./styles.scss";
 
 export default function AvailablePeriods({ period, degree, weather }) {
@@ -9,7 +9,7 @@ export default function AvailablePeriods({ period, degree, weather }) {
                 id={weather}
                 night={period === "night" ? true : false}
             />
-            <span className="periods-container-degree">{degree}</span>
+            <span className="periods-container-degree">{`${degree} °C`}</span>
         </div>
     );
 }

@@ -7,30 +7,15 @@ export const citiesOptions = [
     { city: "Yakutsk", country: "RU" },
 ];
 
-export const kelvinToCelsius = (fahr) => {
-    const celsius = (fahr - 273.15).toFixed(1);
-    return celsius;
-};
-
-export const getLocalTime = (unix) => {
-    const date = new Date(unix * 1000);
-    const hours =
-        date.getHours() - 12 > 0 ? date.getHours() - 12 : date.getHours();
-    const min =
-        date.getMinutes() > 9 ? date.getMinutes() : `0${date.getMinutes()}`;
-    const timeFormatted = `${hours}:${min}`;
-    return timeFormatted;
-};
-
 export const getWeatherIcon = (id, night) => {
-    switch (true) {
-        case id > 800:
+    switch (id) {
+        case 1003 || 1006 || 1009 || 1030 || 1135:
             if (night) {
                 return "moon";
             }
             return "cloudSun";
 
-        case 800:
+        case 1000:
             if (night) {
                 return "moon";
             }
@@ -42,23 +27,51 @@ export const getWeatherIcon = (id, night) => {
             }
             return "cloudSun";
 
-        case id < 700 && id >= 600:
+        case 1114 ||
+            1066 ||
+            1072 ||
+            1114 ||
+            1168 ||
+            1210 ||
+            1213 ||
+            1216 ||
+            1219 ||
+            1222 ||
+            1225 ||
+            1237:
             if (night) {
                 return "snowMoon";
             }
             return "snowy";
 
-        case id < 600:
+        case 1117 ||
+            1192 ||
+            1198 ||
+            1240 ||
+            1243 ||
+            1246 ||
+            1249 ||
+            1252 ||
+            1255 ||
+            1258 ||
+            1261 ||
+            1264 ||
+            1273 ||
+            1276 ||
+            1279 ||
+            1282:
             if (night) {
                 return "moon";
             }
-            const sunOptions = [300, 301, 400, 401];
-
-            if (sunOptions.indexOf(id) > -1) {
-                return "rainSun";
-            }
 
             return "rain";
+
+        case 1063 || 1053 || 1180 || 1183 || 1186:
+            if (night) {
+                return "moon";
+            }
+
+            return "rainSun";
 
         default:
             return "default";
