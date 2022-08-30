@@ -1,6 +1,8 @@
 @import "../../styles/colors";
 @import "../../styles/common";
 
+$icon-space: 2px;
+
 .climate-container {
     display: flex;
     flex-direction: column;
@@ -13,21 +15,87 @@
     gap: $spacing;
     height: 100vh;
 
+    &-title {
+        text-transform: uppercase;
+    }
+
+    &-subtitle {
+        font-weight: $weight-s;
+    }
+
+    &-temp {
+        display: flex;
+        gap: $spacing;
+
+        &-degree {
+            font-size: $font-degree;
+        }
+
+        &-unit {
+            flex: 40%;
+        }
+
+        &-range {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            gap: $icon-space;
+
+            &-max {
+                display: flex;
+                align-items: center;
+
+                &::before {
+                    content: "\2191";
+                    margin-right: $icon-space;
+                    font-size: $font-s;
+                    color: $arrow-icon;
+                }
+            }
+
+            &-min {
+                display: flex;
+                align-items: center;
+
+                &::before {
+                    content: "\2193";
+                    margin-right: $icon-space;
+                    font-size: $font-s;
+                    color: $arrow-icon;
+                }
+            }
+        }
+    }
+
     &-image {
         margin: $spacing-x 0;
     }
 
-    &-periods,
-    &-infos {
+    &-periods {
         width: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: $spacing-m;
     }
 
+    &-infos {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-around;
+    }
+
     &-back {
         position: absolute;
-        left: 0;
-        top: 0;
+        left: 5%;
+        top: 10%;
+        width: 8%;
+        height: 5%;
+        min-height: fit-content;
+        color: $primary;
+        text-decoration: none;
+        font-weight: $weight-bold;
+        font-size: $font-title;
     }
 }

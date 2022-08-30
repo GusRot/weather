@@ -7,4 +7,18 @@
     justify-content: center;
     align-items: center;
     gap: $spacing-m;
+
+    &-info {
+        font-weight: $weight-s;
+    }
+
+    &-separator {
+        height: 25px;
+        width: 1px;
+        background-color: $primary;
+
+        &:last-of-type {
+            display: none;
+        }
+    }
 }
