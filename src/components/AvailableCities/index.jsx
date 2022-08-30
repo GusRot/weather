@@ -6,7 +6,11 @@ export default function AvailableCities() {
     return (
         <div className="cities-container">
             {citiesOptions.map((option) => (
-                <Link to={`/${option.city}`} className="cities-container-city">
+                <Link
+                    key={option.country}
+                    to={`/${option.city}`}
+                    className="cities-container-city"
+                >
                     {option.city}
                 </Link>
             ))}

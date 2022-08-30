@@ -1,12 +1,12 @@
+import WeatherIcons from "../WeatherIcons";
 import "./styles.scss";
-import { Link } from "react-router-dom";
 
-export default function AvailablePeriods() {
+export default function AvailablePeriods({ period, degree, weather }) {
     return (
         <div className="periods-container">
-            <span className="periods-container-period">Dawn</span>
-            <span className="periods-container-image">IMAGE</span>
-            <span className="periods-container-degree">10</span>
+            <span className="periods-container-period">{period}</span>
+            <WeatherIcons id={weather} />
+            <span className="periods-container-degree">{degree}</span>
         </div>
     );
 }

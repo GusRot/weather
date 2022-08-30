@@ -5,10 +5,14 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: $spacing-m $spacing-x;
+    gap: $spacing-xx $spacing-x;
 
     a {
         text-decoration: none;
         color: $primary;
+    }
+
+    &-city {
+        font-size: $font-common;
     }
 }

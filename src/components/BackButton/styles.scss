@@ -1,0 +1,17 @@
+@import "../../styles/colors";
+@import "../../styles/common";
+
+.climate-container {
+    &-back {
+        position: absolute;
+        left: 5%;
+        top: 10%;
+        width: 8%;
+        height: 5%;
+        min-height: fit-content;
+        color: $primary;
+        text-decoration: none;
+        font-weight: $weight-bold;
+        font-size: $font-title;
+    }
+}
