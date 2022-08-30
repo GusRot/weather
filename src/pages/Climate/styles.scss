@@ -4,16 +4,14 @@
 $icon-space: 2px;
 
 .climate-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @extend .center-flex;
     position: relative;
     width: 100%;
-    max-width: 600px;
+    max-width: $desktop;
     margin: 0 auto;
     gap: $spacing;
     height: 100vh;
+    background-image: var(--primary);
 
     &-title {
         text-transform: uppercase;
@@ -21,6 +19,7 @@ $icon-space: 2px;
 
     &-subtitle {
         font-weight: $weight-s;
+        font-size: $font-m;
     }
 
     &-temp {
@@ -37,6 +36,7 @@ $icon-space: 2px;
             font-size: $font-m;
             display: flex;
             align-items: flex-start;
+            align-self: flex-end;
 
             &::before {
                 content: "°";
@@ -81,7 +81,7 @@ $icon-space: 2px;
     }
 
     &-image {
-        margin: $spacing-x 0;
+        height: 10rem;
     }
 
     &-periods {
@@ -98,5 +98,13 @@ $icon-space: 2px;
         width: 100%;
         align-items: center;
         justify-content: space-around;
+    }
+
+    &-image,
+    &-title,
+    &-subtitle,
+    &-infos,
+    &-periods {
+        @extend .center-margin;
     }
 }

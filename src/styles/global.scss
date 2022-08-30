@@ -141,9 +141,17 @@ table {
     scroll-behavior: smooth;
 }
 
+:root {
+    --snow: linear-gradient(90deg, #e0e0e0 0%, #a6a6a6 100%);
+    --rain: linear-gradient(90deg, #616978 0%, #3c4353 100%);
+    --sunny: linear-gradient(90deg, #57cbdc 0%, #3ba1b5 100%);
+    --primary: var($primary);
+    --secondary: var($secondary);
+}
+
 body {
-    color: $primary;
-    background-color: $black;
+    color: var(--secondary);
+    background-color: var(--primary);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }

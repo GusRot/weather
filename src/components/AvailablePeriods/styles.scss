@@ -2,10 +2,7 @@
 @import "../../styles/common";
 
 .periods-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @extend .center-flex;
     gap: $spacing-m;
     margin: $spacing-x 0;
 

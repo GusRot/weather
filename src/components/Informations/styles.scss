@@ -2,16 +2,19 @@
 @import "../../styles/common";
 
 .informations-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @extend .center-flex;
     gap: $spacing-m;
 
     &-info {
         font-weight: $weight-s;
         font-size: $font-s;
         line-height: 1.7rem;
+        height: 1.7rem;
+        text-align: center;
+    }
+
+    &-detail {
+        word-break: keep-all;
     }
 
     &-separator {

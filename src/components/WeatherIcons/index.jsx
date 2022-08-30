@@ -11,16 +11,21 @@ import { getWeatherIcon } from "../../utils";
 export default function WeatherIcons({ id, primary = false, night = false }) {
     const icon = getWeatherIcon(id, night);
     const iconOptions = {
-        rainSun: { icon: rainSun, alt: "rainSun" },
-        cloudSun: { icon: cloudSun, alt: "cloudSun" },
-        snowSun: { icon: snowSun, alt: "snowSun" },
-        snowMoon: { icon: snowMoon, alt: "snowMoon" },
-        moon: { icon: moon, alt: "moon" },
-        rain: { icon: rain, alt: "rain" },
-        sun: { icon: sun, alt: "sun" },
-        snowy: { icon: snowy, alt: "snow" },
-        default: { icon: sun, alt: "sun" },
+        rainSun: { icon: rainSun, alt: "rainSun", theme: "var(--rain)" },
+        cloudSun: { icon: cloudSun, alt: "cloudSun", theme: "var(--sunny)" },
+        snowSun: { icon: snowSun, alt: "snowSun", theme: "var(--snow)" },
+        snowMoon: { icon: snowMoon, alt: "snowMoon", theme: "var(--snow)" },
+        moon: { icon: moon, alt: "moon", theme: "var(--sunny)" },
+        rain: { icon: rain, alt: "rain", theme: "var(--rain)" },
+        sun: { icon: sun, alt: "sun", theme: "var(--sunny)" },
+        snowy: { icon: snowy, alt: "snow", theme: "var(--snow)" },
+        default: { icon: sun, alt: "sun", theme: "var(--sunny)" },
     };
+    document.body.style.setProperty("--primary", iconOptions[icon].theme);
+    document.body.style.setProperty(
+        "--secondary",
+        iconOptions[icon].theme === "var(--snow)" ? "black" : "white"
+    );
     return (
         <img
             src={iconOptions[icon].icon}

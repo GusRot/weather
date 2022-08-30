@@ -71,10 +71,12 @@ export default function Climate({ option }) {
                     />
                     <Informations
                         attribute={"sunrise"}
+                        time={`(GMT-3)`}
                         info={`${getLocalTime(data.sys.sunrise)} AM`}
                     />
                     <Informations
                         attribute={"sunset"}
+                        time={`(GMT-3)`}
                         info={`${getLocalTime(data.sys.sunset)} PM`}
                     />
                     <Informations

@@ -13,3 +13,18 @@ $font-degree: 9.3rem;
 $weight: 400;
 $weight-s: 300;
 $weight-bold: 700;
+
+$desktop: 1024px;
+$mobile: 540px;
+
+.center-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.center-margin {
+    max-width: $mobile;
+    margin: 0 auto;
+}
