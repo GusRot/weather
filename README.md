@@ -3,7 +3,7 @@
 <img alt="Repository size" src="https://img.shields.io/github/repo-size/GusRot/weather">
 </a>
 <a href="https://explosion.invisionapp.com/console/share/SX19J12TJR/476656923/play" target="blank">
-  <img alt="Design" src="https://img.shields.io/badge/Acessar%20Layout%20-Figma-%2304D361">
+  <img alt="Design" src="https://img.shields.io/badge/Acessar%20Layout%20-%2304D361">
 </a>
 <a href="#">
 <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/GusRot/weather?color=%2304D361">
@@ -40,7 +40,10 @@ Aplicação para exibir os dados climáticos do dia das cidades
 
 [![Watch the video](https://img.youtube.com/vi/buARXKwK3ko/maxresdefault.jpg)](https://youtu.be/buARXKwK3ko)
 
-Você também pode rodar na sua máquina:
+## Você também pode rodar na sua máquina:
+
+## DOCKER Script
+- `docker-compose up`
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
