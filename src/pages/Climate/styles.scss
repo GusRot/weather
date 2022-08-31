@@ -108,3 +108,8 @@ $icon-space: 2px;
         @extend .center-margin;
     }
 }
+
+.spinner {
+    @extend .center-flex;
+    height: 100vh;
+}

@@ -1,5 +1,4 @@
 import "./styles.scss";
-import { Link } from "react-router-dom";
 
 export default function Informations({ attribute, info }) {
     return (

@@ -7,6 +7,7 @@ import WeatherIcons from "../../components/WeatherIcons";
 import Periods from "../../components/Periods";
 import Infos from "../../components/Infos";
 import DegreeRange from "../../components/DegreeRange";
+import { SpinnerCircular } from "spinners-react";
 
 export default function Climate({ option }) {
     const [data, setData] = useState({});
@@ -34,7 +35,9 @@ export default function Climate({ option }) {
                     <p className="climate-container-temp-degree">
                         {data.current.temp_c}
                     </p>
-                    <DegreeRange forecastday={data.forecast.forecastday[0].day}/>
+                    <DegreeRange
+                        forecastday={data.forecast.forecastday[0].day}
+                    />
                 </div>
                 <WeatherIcons
                     primary={true}
@@ -49,5 +52,15 @@ export default function Climate({ option }) {
         );
     }
 
-    return <></>;
+    return (
+        <div className="spinner">
+            <SpinnerCircular
+                size={120}
+                thickness={100}
+                speed={100}
+                color="#3ba1b5"
+                secondaryColor="rgba(0, 0, 0, 0.44)"
+            />
+        </div>
+    );
 }
