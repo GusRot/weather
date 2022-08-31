@@ -2,7 +2,7 @@
 @import "../../styles/common";
 
 .home-container {
-    @extend .center-flex;
+    @extend %center-flex;
     width: 100%;
     max-width: $desktop;
     margin: 0 auto;
@@ -24,6 +24,6 @@
     &-image,
     &-title,
     &-subtitle {
-        @extend .center-margin;
+        @extend %center-margin;
     }
 }

@@ -17,14 +17,14 @@ $weight-bold: 700;
 $desktop: 1024px;
 $mobile: 540px;
 
-.center-flex {
+%center-flex {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-.center-margin {
+%center-margin {
     max-width: $mobile;
     margin: 0 auto;
 }

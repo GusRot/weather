@@ -2,7 +2,7 @@
 @import "../../../styles/common";
 
 .periods-container {
-    @extend .center-flex;
+    @extend %center-flex;
     gap: $spacing-m;
     margin: $spacing-x 0;
 

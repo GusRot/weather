@@ -1,6 +1,6 @@
 import AvailableCities from "../../components/AvailableCities";
-import "./styles.scss";
 import worldwide from "../../assets/worldwide.svg";
+import "./styles.scss";
 
 export default function Home() {
     return (

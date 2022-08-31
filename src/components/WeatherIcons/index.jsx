@@ -21,11 +21,13 @@ export default function WeatherIcons({ id, primary = false, night = false }) {
         snowy: { icon: snowy, alt: "snow", theme: "var(--snow)" },
         default: { icon: sun, alt: "sun", theme: "var(--sunny)" },
     };
-    document.body.style.setProperty("--primary", iconOptions[icon].theme);
-    document.body.style.setProperty(
-        "--secondary",
-        iconOptions[icon].theme === "var(--snow)" ? "black" : "white"
-    );
+    if (primary) {
+        document.body.style.setProperty("--primary", iconOptions[icon].theme);
+        document.body.style.setProperty(
+            "--secondary",
+            iconOptions[icon].theme === "var(--snow)" ? "black" : "white"
+        );
+    }
     return (
         <img
             src={iconOptions[icon].icon}

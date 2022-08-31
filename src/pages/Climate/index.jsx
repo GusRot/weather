@@ -1,14 +1,13 @@
-import "./styles.scss";
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { api } from "../../services/api";
+import { SpinnerCircular } from "spinners-react";
 import BackButton from "../../components/BackButton";
 import WeatherIcons from "../../components/WeatherIcons";
 import Periods from "../../components/Periods";
 import Infos from "../../components/Infos";
 import DegreeRange from "../../components/DegreeRange";
-import { SpinnerCircular } from "spinners-react";
 import PageError from "../PageError";
+import "./styles.scss";
 
 export default function Climate({ option }) {
     const [data, setData] = useState({});
@@ -29,7 +28,6 @@ export default function Climate({ option }) {
     }
 
     if (Object.getOwnPropertyNames(data).length) {
-        console.log(data);
         return (
             <div className="climate-container">
                 <BackButton />

@@ -1,6 +1,6 @@
-import "./styles.scss";
 import { Link } from "react-router-dom";
 import { citiesOptions } from "../../utils";
+import "./styles.scss";
 
 export default function AvailableCities() {
     document.body.style.setProperty("--primary", "black");

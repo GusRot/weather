@@ -4,7 +4,7 @@
 $icon-space: 2px;
 
 .climate-container {
-    @extend .center-flex;
+    @extend %center-flex;
     position: relative;
     width: 100%;
     max-width: $desktop;
@@ -58,7 +58,7 @@ $icon-space: 2px;
                 font-size: $font-s;
 
                 &::before {
-                    content: "\2191";
+                    content: "\2193";
                     margin-right: $icon-space;
                     font-size: $font-s;
                     color: $arrow-icon;
@@ -71,7 +71,7 @@ $icon-space: 2px;
                 font-size: $font-s;
 
                 &::before {
-                    content: "\2193";
+                    content: "\2191";
                     margin-right: $icon-space;
                     font-size: $font-s;
                     color: $arrow-icon;
@@ -105,11 +105,11 @@ $icon-space: 2px;
     &-subtitle,
     &-infos,
     &-periods {
-        @extend .center-margin;
+        @extend %center-margin;
     }
 }
 
 .spinner {
-    @extend .center-flex;
+    @extend %center-flex;
     height: 100vh;
 }
