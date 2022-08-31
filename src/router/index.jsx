@@ -16,7 +16,6 @@ export default function Router() {
                     element={<Climate option={option} />}
                 />
             ))}
-            <Route path="/climate" element={<Climate />} />
         </Routes>
     );
 }

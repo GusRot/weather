@@ -16,11 +16,10 @@ export default function Climate({ option }) {
 
     useEffect(() => {
         api.get(
-            `forecast.json?key=${process.env.REACT_APP_API_KEY}&q=${option.city}&days=1&aqi=yes&alerts=no`
+            `forecast.json?key=${process.env.REACT_APP_API_KEY}&q=${option.city}&days=1&aqi=no&alerts=no`
         )
             .then((response) => setData(response.data))
             .catch((error) => {
-                console.log(error);
                 setError({ error: true, message: error });
             });
     }, []);
@@ -30,6 +29,7 @@ export default function Climate({ option }) {
     }
 
     if (Object.getOwnPropertyNames(data).length) {
+        console.log(data);
         return (
             <div className="climate-container">
                 <BackButton />

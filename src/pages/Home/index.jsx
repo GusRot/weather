@@ -7,11 +7,7 @@ export default function Home() {
         <div className="home-container">
             <h1 className="home-container-title">Weather</h1>
             <p className="home-container-subtitle">Select a city</p>
-            <img
-                src={worldwide}
-                alt="world-image"
-                className="home-container-image"
-            />
+            <img src={worldwide} alt="world" className="home-container-image" />
             <AvailableCities />
         </div>
     );

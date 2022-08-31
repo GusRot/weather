@@ -11,6 +11,7 @@ export default function Periods({ hoursArray }) {
         <div className="climate-container-periods">
             {periods.map((period) => (
                 <AvailablePeriods
+                    key={period.period}
                     period={period.period}
                     degree={period.temp_c}
                     weather={period.condition.code}

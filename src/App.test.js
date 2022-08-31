@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor, act } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import App from "../src/App";
 import { citiesOptions } from "./utils";
@@ -51,5 +51,20 @@ describe("render all elements in Home Page", () => {
         expect(
             screen.getByText(citiesOptions[4].city).closest("a")
         ).toHaveAttribute("href", `/${citiesOptions[4].city}`);
+    });
+});
+
+describe("render elements in Climate Page", () => {
+    test("fetch and display API call", async () => {
+        const option = citiesOptions[4];
+        const { getByText } = render(<App />);
+        const city = getByText(option.city);
+
+        act(async () => {
+            await waitFor(() => {
+                city.click(screen.getByText(option.city));
+            });
+        });
+        expect(screen.getByText(option.city)).toBeInTheDocument();
     });
 });
