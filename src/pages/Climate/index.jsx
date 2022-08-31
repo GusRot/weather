@@ -8,20 +8,28 @@ import Periods from "../../components/Periods";
 import Infos from "../../components/Infos";
 import DegreeRange from "../../components/DegreeRange";
 import { SpinnerCircular } from "spinners-react";
+import PageError from "../PageError";
 
 export default function Climate({ option }) {
     const [data, setData] = useState({});
+    const [error, setError] = useState({ error: false, message: "" });
 
     useEffect(() => {
         api.get(
             `forecast.json?key=${process.env.REACT_APP_API_KEY}&q=${option.city}&days=1&aqi=yes&alerts=no`
         )
             .then((response) => setData(response.data))
-            .catch((error) => console.log(error));
+            .catch((error) => {
+                console.log(error);
+                setError({ error: true, message: error });
+            });
     }, []);
 
+    if (error.error) {
+        return <PageError error={error.message} />;
+    }
+
     if (Object.getOwnPropertyNames(data).length) {
-        console.log(data);
         return (
             <div className="climate-container">
                 <BackButton />
