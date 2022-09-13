@@ -13,6 +13,10 @@
 </a>
 </div>
 
+## 📝 DISCLAIMER:
+
+Infelizmente a API da https://www.weatherapi.com/ atualmente requer um plano com assinatura para disponibilizar os dados utilizados nesse projeto, portando o build do projeto não está mais disponível. Voce pode testar essa aplicação fazendo seu cadastro com a promoção de 7 dias grátis e adicionar sua API_KEY dentro do .env. Abaixo segue um video do resultado do resultado final
+
 ## 📝 O Projeto
 
 Aplicação para exibir os dados climáticos do dia das cidades
@@ -31,10 +35,6 @@ Aplicação para exibir os dados climáticos do dia das cidades
 ### Outras bibliotecas utilizadas
 
 - `axios` `sass` `react-router-dom` `spinners-react` `jest`
-
-## Build
-
-[Acesse aqui] (https://main--astounding-sundae-9d7eaa.netlify.app/) para visualizar o build do projeto
 
 ## Video Preview (Youtube)
 
